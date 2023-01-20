@@ -1,2 +1,13 @@
- <p>投稿ユーザー画像：<%= image_tag @user.get_profile_image(100,100) %></p>
 
+<div class = "show box">
+
+  <h2>Book detail</h2>
+  <table>
+    <tr>
+      <td><%= image_tag @user.get_profile_image(100,100) %><br><%= @user.name %></td>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+      <td><%= link_to "Edit", edit_book_path(@book), method: :edit %> </td>
+      <td><%= link_to "Destroy", books_path(@book), method: :delete %> </td>
+    </tr>
+  </table>
