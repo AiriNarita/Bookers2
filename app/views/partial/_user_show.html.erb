@@ -1,0 +1,15 @@
+<div class = "show box">
+
+  <h2>User info</h2>
+  <%= image_tag user.get_profile_image(100,100) %>
+  <table>
+    <tr>
+      <td> <h4>name</h4> </td>
+      <td><%= user.name %> </td>
+    </tr>
+    <tr>
+      <td>introduction </td>
+    </tr>
+  </table>
+
+  <%= link_to "編集", edit_user_path(@user), method: :edit %>
