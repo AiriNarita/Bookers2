@@ -9,14 +9,13 @@
       <th>Body</th>
     </tr>
   </thead>
-     <%= books.each do |books| %>
+     <% books.each do |books| %>
    <tbody>
     <tr>
-      <th> <%= image_tag post_image.get_image %> <th>
       <th> <%= image_tag  @user.get_profile_image(100,100) %> </th>
       <th> <%= books.title %> </th>
       <th <%= books.body %> </th>
     </tr>
    </tbody>
-    <%= end %>
+    <% end %>
   </table>

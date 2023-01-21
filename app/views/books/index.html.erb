@@ -1,6 +1,6 @@
 
 
- <%= render partial: "partial/user_show", locals: { user: @user }%>
+ <%= render partial: "partial/user_show", locals: { user: current_user }%>
 
- <%= render partial: "partial/book_new", locals: { book: @book }%>
+ <%= render partial: "partial/book_new", locals: { book: @book } %>
 
