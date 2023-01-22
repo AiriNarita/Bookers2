@@ -11,6 +11,8 @@
   </head>
 
   <body>
+         <span> Bookers </span>
+
       <% if user_signed_in? %> <!--sign_in中--!>
       <li>
         <%= link_to "Homes", user_path(current_user) %>
@@ -39,7 +41,7 @@
         <%= link_to "ログイン", new_user_session_path %>
       </li>
     <% end %>
+     <%= yield %>
 
-    <%= yield %>
   </body>
 </html>
