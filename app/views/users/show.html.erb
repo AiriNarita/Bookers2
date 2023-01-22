@@ -1,22 +1,13 @@
-<div class = "show box">
 
-  <h2>User info</h2>
-  <%= image_tag @user.get_profile_image(100,100) %>
-  <table>
-    <tr>
-      <td> <h4>name</h4> </td>
-      <td><%= @user.name %> </td>
-    </tr>
-    <tr>
-      <td><h4>introduction </h4></td>
-      <td> <%= @user.introduction %>  </td>
-    </tr>
-  </table>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render partial: "partial/user_show", locals: { user: @user }%>
+      <%= render partial: "partial/book_new", locals: { book: @book }%>
+    </div>
+
+    <div class="col-md-8 offset-md-1">
+      <%= render partial: "partial/user_booklist", locals: { books: @books } %>
+    </div>
+  </div>  
 </div>
-
-  <%= link_to "編集", edit_user_path(@user), method: :get%>
-
-
-  <%= render partial: "partial/book_new", locals: { book: @book }%>
-
-  <%= render partial: "partial/user_booklist", locals: { books: @books } %>
