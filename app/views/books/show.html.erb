@@ -13,8 +13,10 @@
             <td><%= image_tag @user.get_profile_image(100,100) %><br><%= link_to @user.name, user_path(@user) %> </td>
             <td><%= link_to @book.title, book_path(@book) %> </td>
             <td><%= @book.body %></td>
+             <% if @book.user == current_user %>
             <td><%= link_to "Edit", edit_book_path(@book), method: :get %> </td>
             <td><%= link_to "Destroy", book_path(@book), method: :delete %> </td>
+            <% end %>
           </tr>
         </table>
      </div>
