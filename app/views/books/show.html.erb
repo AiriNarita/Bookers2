@@ -1,21 +1,21 @@
 
-<div class = "container" >
-  <div class = "row">
-     <div class = "col-3">
+<div class= "container" >
+  <div class= "row">
+     <div class = "col-md-3">
        <%= render partial: "partial/user_show", locals: { user: @user }%>
        <%= render partial: "partial/book_new", locals: { book: @book }%>
      </div>
 
-     <div class = "col-8">
+     <div class= "col-md-8 offset-md-1">
       <h2>Book detail</h2>
-        <table>
+        <table class="table table-hover table-inverse">
           <tr>
             <td><%= image_tag @user.get_profile_image(100,100) %><br><%= link_to @user.name, user_path(@user) %> </td>
             <td><%= link_to @book.title, book_path(@book) %> </td>
             <td><%= @book.body %></td>
              <% if @book.user == current_user %>
-            <td><%= link_to "Edit", edit_book_path(@book), method: :get %> </td>
-            <td><%= link_to "Destroy", book_path(@book), method: :delete %> </td>
+            <td><%= link_to "Edit", edit_book_path(@book), class: 'btn btn-sm btn-success', edit_book_57911method: :get %> </td>
+            <td><%= link_to "Destroy", book_path(@book), class:'btn btn-sm btn-danger destroy_book_57911', method: :delete %> </td>
             <% end %>
           </tr>
         </table>
