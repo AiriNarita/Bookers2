@@ -1,23 +1,23 @@
 <h2>Books</h2>
 
-<div class="table table-hover table-inverse">
-  <table>
-   <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-   </thead>
-   <tbody>
-    <% books.each do |books| %>
-     <tr>
-       <th> <%= image_tag  @user.get_profile_image(100,100) %> </th>
-       <th><%= link_to books.title, book_path(books.id) %> </th>
-       <th> <%= books.body %> </th>
-     </tr>
-   </tbody>
+<div>
+  <table class="table table-hover table-inverse">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% books.each do |books| %>
+      <tr>
+        <th><%= image_tag @user.get_profile_image(100,100) %></th>
+        <th><%= link_to books.title, book_path(books.id) %></th>
+        <th><%= books.body %></th>
+      </tr>
+    </tbody>
     <% end %>
   </table>
-</div> 
+</div>
