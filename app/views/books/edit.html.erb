@@ -1,4 +1,16 @@
 <div class="container">
+  <!-- Validation Errors -->
+  <div class="error_message">
+    <% if @book.errors.any? %>
+      <h4><%= @book.errors.count %> error prohibited this book from being saved:</h4>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <!-- Contents -->
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
         <h1>Edit Book</h1>

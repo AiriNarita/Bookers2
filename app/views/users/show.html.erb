@@ -1,5 +1,9 @@
 
 <div class="container px-5 px-sm-0"">
+  <!--Flash message-->
+  <div>
+    <%= flash[:notice] %>
+  </div>
   <div class="row">
     <div class="col-md-3">
       <%= render partial: "partial/user_show", locals: { user: @user }%>

@@ -1,5 +1,29 @@
 
 <div class= "container" >
+  <!--Flash message-->
+  <div>
+    <%= flash[:notice] %>
+  </div>
+
+  <div class="error_message">
+    <% if @book.errors.any? %>
+    <h4><%= @book.errors.count %> error prohibited this book from being saved:</h4>
+
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
+  <% end %>
+
+
+  </div>
+
+
+
+
+
   <div class= "row">
       <div class = "col-md-3">
        <%= render partial: "partial/user_show", locals: { user: @user }%>
