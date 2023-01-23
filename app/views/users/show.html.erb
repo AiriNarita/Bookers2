@@ -3,12 +3,11 @@
   <div class="row">
     <div class="col-md-3">
       <%= render partial: "partial/user_show", locals: { user: @user }%>
-      
       <%= render partial: "partial/book_new", locals: { book: @book }%>
     </div>
 
     <div class="col-md-8 offset-md-1">
-
+      
       <%= render partial: "partial/user_booklist", locals: { books: @books } %>
     </div>
   </div>  
